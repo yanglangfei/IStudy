@@ -66,8 +66,6 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
         mListView.setOnItemClickListener(this);
         mListView.setOnScrollListener(this);
         mPsTeach.setChecked(true);
-
-
     }
 
     @Override
