@@ -179,6 +179,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
             try {
                 String url = Constant.GETPS.replace("{n}", params[0]).replace("{m}", params[1]);
                 Document doc = Jsoup.connect(url)
+                        .timeout(1000*3)
                         .get();
                 return  JsoupUtils.getArticleList(doc,mArticles);
             } catch (IOException e) {
