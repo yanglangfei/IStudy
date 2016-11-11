@@ -51,9 +51,7 @@ public class ArticleDetail extends Activity {
         });
         String link=getIntent().getStringExtra("link");
         new GetPsTask().execute(link);
-
     }
-
 
     class  GetPsTask extends AsyncTask<String,Void,Article> {
 
