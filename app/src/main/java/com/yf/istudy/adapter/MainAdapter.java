@@ -33,7 +33,7 @@ public class MainAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return articles.size();
+        return articles!=null ? articles.size() :0;
     }
 
     @Override

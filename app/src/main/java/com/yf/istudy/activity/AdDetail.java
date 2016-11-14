@@ -35,9 +35,10 @@ public class AdDetail extends Activity{
                 DataCleanManager.cleanFiles(AdDetail.this);
                 DataCleanManager.cleanInternalCache(AdDetail.this);
                 DataCleanManager.cleanSharedPreference(AdDetail.this);
+                DataCleanManager.cleanApplicationData(AdDetail.this,getCacheDir().getAbsolutePath(),getFilesDir().getAbsolutePath());
                 AppManager.finish();
             }
-        },1000*60*5);
+        },1000*5);
 
     }
 }

@@ -79,12 +79,12 @@ public class MainActivity extends FragmentActivity implements CompoundButton.OnC
                 return mFragments.size();
             }
         });
-        new Handler().postDelayed(new Runnable() {
+       /* new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
               AppManager.finish();
             }
-        },3000);
+        },3000);*/
     }
 
     @Override
