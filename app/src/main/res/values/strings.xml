@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">IStudy</string>
+    <string name="auto_install">auto click</string>
 </resources>

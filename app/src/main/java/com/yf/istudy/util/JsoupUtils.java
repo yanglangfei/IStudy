@@ -39,6 +39,11 @@ public class JsoupUtils {
         return articles;
     }
 
+    /**
+     * @param doc
+     * @return
+     * @auth      解析 文章内容
+     */
     public static Article getArticleDetail(Document doc) {
         Element results = doc.getElementsByClass("rich_media_content").first();
         Element rich_media_titl = doc.getElementsByClass("rich_media_title").first();
@@ -48,6 +53,10 @@ public class JsoupUtils {
         return article;
     }
 
+    /**
+     * @param body
+     * @return  格式化内容中的图片
+     */
     public static String  resetBody(Element body){
         Elements img = body.getElementsByTag("img");
         for (int i = 0; i < img.size(); i++) {

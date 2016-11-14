@@ -7,15 +7,25 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.yf.istudy.R;
+
 /**
  * Created by Administrator on 2016/11/10.
  */
 
 public class MoreFragment extends Fragment {
 
+    private View view;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return super.onCreateView(inflater, container, savedInstanceState);
+        view=inflater.inflate(R.layout.ui_more,container,false);
+        initView();
+        return view;
+    }
+
+    private void initView() {
+
     }
 }

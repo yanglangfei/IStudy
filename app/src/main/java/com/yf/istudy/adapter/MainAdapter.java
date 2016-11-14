@@ -10,7 +10,6 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.yf.istudy.MainActivity;
 import com.yf.istudy.R;
 import com.yf.istudy.model.Article;
 
@@ -19,7 +18,6 @@ import java.util.List;
 /**
  * Created by Administrator on 2016/11/10.
  */
-
 public class MainAdapter extends BaseAdapter {
     private  List<Article> articles;
     private  Context context;

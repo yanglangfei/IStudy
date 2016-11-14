@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.yf.istudy.R;
 import com.yf.istudy.model.Article;
+import com.yf.istudy.util.AppManager;
 import com.yf.istudy.util.Constant;
 import com.yf.istudy.util.JsoupUtils;
 
@@ -25,7 +26,6 @@ import java.util.concurrent.ExecutionException;
 /**
  * Created by Administrator on 2016/11/10.
  */
-
 public class ArticleDetail extends Activity {
     private TextView mDetailTitle;
     private WebView mBookDetailBody;
@@ -37,6 +37,7 @@ public class ArticleDetail extends Activity {
     }
 
     private void initView() {
+        AppManager.add(this);
         mDetailTitle = (TextView) findViewById(R.id.detailTitle);
         mBookDetailBody = (WebView) findViewById(R.id.bookDetailBody);
         final WebSettings setting = mBookDetailBody.getSettings();
@@ -71,7 +72,6 @@ public class ArticleDetail extends Activity {
             super.onPostExecute(articles);
             mDetailTitle.setText(articles.getTitle());
             mBookDetailBody.loadDataWithBaseURL(null,articles.getBody(),"text/html","utf-8",null);
-
         }
     }
 }
